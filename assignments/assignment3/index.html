@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal Subscription</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form>
+        <label for="startingDate">Starting Date:</label>
+        <input type="date" id="startingDate" name="startingDate" required>
+
+        <label for="subscriptionDuration">Subscription Duration (in years):</label>
+        <input type="range" id="subscriptionDuration" name="subscriptionDuration" list="durationList" min="1" max="10" step="1" value="1">
+        <datalist id="durationList">
+            <option value="1">1 Year</option>
+            <option value="2">2 Years</option>
+            <option value="3">3 Years</option>
+            <option value="4">4 Years</option>
+            <option value="5">5 Years</option>
+            <option value="6">6 Years</option>
+            <option value="7">7 Years</option>
+            <option value="8">8 Years</option>
+            <option value="9">9 Years</option>
+            <option value="10">10 Years</option>
+        </datalist>
+
+        <label>Occupation:</label>
+        <input type="radio" id="student" name="occupation" value="student" checked>
+        <label for="student">Student</label>
+        <input type="radio" id="professional" name="occupation" value="professional">
+        <label for="professional">Professional</label>
+
+        <label for="journalTitles">Journal Titles (select at least five):</label>
+        <select id="journalTitles" name="journalTitles" multiple required>
+            <option value="science">Science</option>
+            <option value="technology">Technology</option>
+            <option value="medicine">Medicine</option>
+            <option value="environment">Environment</option>
+            <option value="business">Business</option>
+        </select>
+
+        <label for="numSubscriptions">Number of Subscriptions (10-200):</label>
+        <input type="number" id="numSubscriptions" name="numSubscriptions" min="10" max="200" required>
+
+        <label for="websiteUrl">Website URL:</label>
+        <input type="url" id="websiteUrl" name="websiteUrl" placeholder="https://example.com" required>
+
+        <button type="submit">Subscribe</button>
+    </form>
+</body>
+
+</html>
